@@ -9,7 +9,7 @@ const ChevronIcon = () => (
   </svg>
 );
 
-export default function Navbar({ selectedCategory, onCategoryChange, cartCount = 0 }) {
+export default function Navbar({ selectedCategory, onCategoryChange, cartCount = 0, onCartOpen }) {
   const [menuOpen,   setMenuOpen]   = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const menuRef = useRef(null);
@@ -62,7 +62,7 @@ export default function Navbar({ selectedCategory, onCategoryChange, cartCount =
         {/* Right icons */}
         <div className="nav-icons-group">
           <button className="icon-btn" aria-label="Search"><FaSearch /></button>
-          <button className="icon-btn" aria-label="Cart" style={{ position: 'relative' }}>
+          <button className="icon-btn cart-icon-btn" aria-label="Cart" onClick={onCartOpen}>
             <FaShoppingBag />
             {cartCount > 0 && <span className="cart-badge-count">{cartCount}</span>}
           </button>

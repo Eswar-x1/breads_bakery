@@ -4,7 +4,6 @@ export default function ContactSection() {
   return (
     <section id="contact" className="contact-section">
 
-      {/* Photo header banner */}
       <div className="contact-photo-banner">
         <div className="contact-photo-overlay" />
         <div className="contact-banner-text">
@@ -14,7 +13,6 @@ export default function ContactSection() {
         </div>
       </div>
 
-      {/* Cards */}
       <div className="contact-container">
         <div className="contact-grid">
           <div className="contact-card">

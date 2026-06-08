@@ -4,7 +4,7 @@ import ScrollReveal from './ScrollReveal';
 
 const CATEGORIES = ['All', 'Breakfast', 'Pastries', 'Specials'];
 
-export default function ProductList({ products, selectedCategory, onCategoryChange, onAddToCart, sectionRef }) {
+export default function ProductList({ products, selectedCategory, onCategoryChange, onAddToCart, cartItems = [], sectionRef }) {
   const filtered = selectedCategory === 'All'
     ? products
     : products.filter((item) => item.category === selectedCategory);
@@ -38,7 +38,7 @@ export default function ProductList({ products, selectedCategory, onCategoryChan
         <div className="product-grid">
           {filtered.map((item, index) => (
             <ScrollReveal key={item.id} delayClass={`delay-${(index % 3) + 1}`}>
-              <ProductCard product={item} onAddToCart={onAddToCart} />
+              <ProductCard product={item} onAddToCart={onAddToCart} cartItems={cartItems} />
             </ScrollReveal>
           ))}
         </div>

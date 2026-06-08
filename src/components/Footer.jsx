@@ -4,14 +4,12 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-flex-container">
-        
-        {/* Column 1: Core Brand Info */}
+
         <div className="footer-col">
           <h4 className="footer-logo">BREADS BAKERY</h4>
           <p className="footer-tagline">Bringing the authentic taste of old-world artisan baking directly to the streets of New York City.</p>
         </div>
 
-        {/* Column 2: Specific Location Schedules */}
         <div className="footer-col">
           <h5>Union Square Flagship</h5>
           <p>18 East 16th Street</p>
@@ -19,7 +17,6 @@ export default function Footer() {
           <p className="footer-hours">Mon - Sun: 6:00 AM - 8:00 PM</p>
         </div>
 
-        {/* Column 3: Secondary Location Schedules */}
         <div className="footer-col">
           <h5>Upper West Side</h5>
           <p>2014 Broadway</p>
@@ -27,7 +24,6 @@ export default function Footer() {
           <p className="footer-hours">Mon - Sun: 7:00 AM - 7:00 PM</p>
         </div>
 
-        {/* Column 4: Quick Dynamic Links */}
         <div className="footer-col">
           <h5>Inquiries</h5>
           <ul className="footer-links-list">
@@ -38,8 +34,7 @@ export default function Footer() {
         </div>
 
       </div>
-      
-      {/* Bottom Legal Baseline Strip */}
+
       <div className="footer-bottom">
         <p>&copy; 2026 Breads Bakery NYC Concept Mirror. Designed for Educational React Development.</p>
       </div>
